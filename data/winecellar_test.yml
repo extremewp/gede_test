@@ -1,0 +1,10 @@
+sku_list_test:
+  data:
+    body:
+      page_index: 1
+      page_size: 10
+      product_name: ''
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/wineStock/myWineSkuList

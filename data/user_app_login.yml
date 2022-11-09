@@ -1,0 +1,30 @@
+test_user_app_login_password_file:
+  data:
+    body:
+      inviter_user_id: ''
+      mobile: '19520409998'
+      validateCode: '8868'
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /user/userLogin/userAppLogin
+test_user_app_login_python_file:
+  data:
+    body:
+      inviter_user_id: ''
+      mobile: '19520409'
+      validateCode: '8888'
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /user/userLogin/userAppLogin
+user_app_login:
+  data:
+    body:
+      inviter_user_id: ''
+      mobile: '19520409998'
+      validateCode: '8888'
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /user/userLogin/userAppLogin

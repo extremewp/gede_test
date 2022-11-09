@@ -1,0 +1,116 @@
+addEvaluation_pass:
+  data:
+    body:
+      appraisal_item_relation_vos:
+      - item_content: 3
+        item_id: -1
+      - item_content: "2022\u5E74"
+        item_id: 2
+      - item_content: "34\xB0"
+        item_id: 3
+      - item_content: 400ml
+        item_id: 4
+      - item_content: "\u74F6"
+        item_id: 11
+      evaluation_product_tag_vos:
+      - option_id: 4
+        tag_id: 2
+        tag_value: "\u5B8C\u597D"
+      product_evaluation_image_vos:
+      - type: 1
+        url_domain: https://googutwine.oss-cn-beijing.aliyuncs.com/
+        url_path: web-dev-file/2022-10-16/7424c6117e5c4717bf2a3111492b6dfe-02b32253-95cf-4af4-9a6a-ecdc60803754678085223324006117236.jpg
+      - type: 2
+        url_domain: https://googutwine.oss-cn-beijing.aliyuncs.com/
+        url_path: web-dev-file/2022-10-16/7424c6117e5c4717bf2a3111492b6dfe-02b32253-95cf-4af4-9a6a-ecdc60803754678085223324006117236.jpg
+      - type: 3
+        url_domain: https://googutwine.oss-cn-beijing.aliyuncs.com/
+        url_path: web-dev-file/2022-10-16/7424c6117e5c4717bf2a3111492b6dfe-02b32253-95cf-4af4-9a6a-ecdc60803754678085223324006117236.jpg
+      - type: 4
+        url_domain: https://googutwine.oss-cn-beijing.aliyuncs.com/
+        url_path: web-dev-file/2022-10-16/7424c6117e5c4717bf2a3111492b6dfe-02b32253-95cf-4af4-9a6a-ecdc60803754678085223324006117236.jpg
+      - type: 5
+        url_domain: https://googutwine.oss-cn-beijing.aliyuncs.com/
+        url_path: web-dev-file/2022-10-16/7424c6117e5c4717bf2a3111492b6dfe-02b32253-95cf-4af4-9a6a-ecdc60803754678085223324006117236.jpg
+      product_name: "\u8001\u65E7\u8305\u53F0"
+      product_quantity: 6
+      remarks: "\u54C7\u54C8\u54C8"
+      system_source: 2
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/identification/addEvaluation
+appraisaldatabase:
+  data:
+    body:
+      system_source: '2'
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/label/listEvaluationLabel
+getUserEvaluationBill_pass:
+  data:
+    body:
+      bill_number: JD2022101600512
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/identification/getUserEvaluationBill
+listUserEvaluationBill_djb:
+  data:
+    body:
+      identification_status: 6
+      page_index: 1
+      page_size: 10
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/identification/listUserEvaluationBill
+listUserEvaluationBill_dpg:
+  data:
+    body:
+      identification_status: 1
+      page_index: 1
+      page_size: 10
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/identification/listUserEvaluationBill
+listUserEvaluationBill_ygb:
+  data:
+    body:
+      identification_status: 10
+      page_index: 1
+      page_size: 10
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/identification/listUserEvaluationBill
+listUserEvaluationBill_yjj:
+  data:
+    body:
+      identification_status: 7
+      page_index: 1
+      page_size: 10
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/identification/listUserEvaluationBill
+listUserEvaluationBill_ypg:
+  data:
+    body:
+      identification_status: 2
+      page_index: 1
+      page_size: 10
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/identification/listUserEvaluationBill
+listappraisalitem:
+  data:
+    body:
+      system_source: 2
+  header:
+    Content-Type: application/json;charset=UTF-8
+  method: post
+  url: /commodity/appraisal/listAppraisalItem
