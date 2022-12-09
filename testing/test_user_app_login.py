@@ -3,6 +3,7 @@ import binascii
 import time
 import random
 
+import requests
 from Crypto.Cipher import AES
 
 from util.user_app_login import UserAppLogin
@@ -13,7 +14,7 @@ class TestUserAppLogin:
         self.ua = UserAppLogin()
 
     def test_uesr_app_login(self):
-        self.ua.test_duquyanzhengmaneirong()
+        self.ua.test_duquyanzhengmaneirong(19520409998)
         res = self.ua.user_app_login()
         assert res['header']['message'] == '成功'
 
@@ -53,6 +54,12 @@ class TestUserAppLogin:
         while len(value.encode('utf-8')) % 16 != 0:
             value += '\x00'  # 补全, 明文和key都必须是16的倍数
         return value.rstrip()
+
+    def test_shangchuan(self):
+        files = {"file": open(r"D:\Develop\gede_test\data\prodPriceMarket.xlsx",'rb')}
+        url = "http://10.20.80.180:8081/api/file/system/price/batchUpdate?system_source=2&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjdXJyZW50VGltZSI6MTY2ODA3MjE0MSwiaXNMb2dpbiI6MSwicm9sZUlkcyI6IjMsNSw2LDgiLCJvcmdJZHMiOiIxLDIsMyw0LDUsMSIsImxvZ2luTmFtZSI6IjE5NTIwNDA5OTk4IiwiaXNzIjoiZXJwX3N0YWZmIiwiZXhwIjoxNjY4MTU4NTQxLCJ1c2VyTmFtZSI6IueOi-m5j-a1i-ivlSIsInN0YWZmSWQiOjExNzU2fQ.A1yRLXhCy55omEbpwfqXFiHmDI37ERJEl13ybo1N66c"
+        res = requests.post(url=url, files=files)
+        print(res.json())
 
     def test_AESEncrypt(self):
         try:

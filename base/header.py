@@ -2,8 +2,9 @@ import time
 
 import yaml
 
-
 class Header:
+    def __init__(self):
+        self.a = yaml.safe_load(open("../data/token.yml"))
     def header(self, url):
         a = url.split('?')[0]
         transaction_type = a.split('/')[-1]
@@ -18,4 +19,5 @@ class Header:
         header = {"app_id": app_id, "time_stamp": time_stamp, "transaction_type": transaction_type,
                   "token": token, "resources_id": resources_id, "message_id": message_id,
                   "imei": imei, "terminal": terminal, "version": version}
+        print(self.a)
         return header

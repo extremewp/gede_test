@@ -29,7 +29,6 @@ class UserAppLogin:
         return res
 
         # 登录手机号不足11
-
     def user_app_login_python_file(self):
         res = self.ba.base_api(**yaml.safe_load(open('../data/user_app_login.yml'))['test_user_app_login_python_file'])
         return res

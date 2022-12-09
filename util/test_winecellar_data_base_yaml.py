@@ -1,11 +1,15 @@
 import yaml
 
+from base.header import Header
+
 
 class TestWinecellarDateBaseYaml:
     def setup(self):
 
         self.token = yaml.safe_load(open('../data/token.yml'))['token']
         print(type(self.token))
+    def test_asd(self):
+        print(Header().header("asdasdas"))
 
     def test_winecellar(self):
         data = {
