@@ -1,7 +1,7 @@
 import pymysql
 
 
-class MysqlUtil:
+class MysqlUsedUtil:
 
     def __init__(self):
         self.db = pymysql.connect(
@@ -13,18 +13,20 @@ class MysqlUtil:
             cursorclass=pymysql.cursors.DictCursor
         )
 
-    def mysql_reade(self,sql):
-
-
+    def mysql_used_reade(self, sql):
         result = self.db.cursor()
-
-
         # execute执行sql
         result.execute(sql)
-        response =result.fetchall()
-
+        response = result.fetchall()
         # 提交
         return response
 
+    def mysql_used_execute(self, sql):
+        try:
+            self.db.cursor.execute(sql)
+            self.db.commit()
+        except:
+            self.db.rollback()
+
     def __del__(self):
-        self.db.commit()
+        self.db.close()
