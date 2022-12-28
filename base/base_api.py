@@ -21,7 +21,8 @@ class BaseApi:
         data['data']['header'] = data_header
         date_time = data['data']['header']['time_stamp']
         date = json.dumps(data['data'])
-        url = self.url.url(ip, data['url'], self.sa.sign_api(date, date_time))
+        url = self.url.url(ip, data['url'],
+        self.sa.sign_api(date, date_time))
         if method == 'post':
             res = requests.post(url=url, data=date, headers=header)
         else:

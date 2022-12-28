@@ -11,7 +11,10 @@ class TestAppraisalDataBase:
                                              },
 
                                   'data': {
-                                      "body": {"system_source": "2"}}
+                                      "body": {"system_source": "2"}},
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
                                   },
             'listappraisalitem': {
                 "method": "post",
@@ -20,7 +23,10 @@ class TestAppraisalDataBase:
                     "body": {"system_source": 2}
                 },
                 "header": {'Content-Type': 'application/json;charset=UTF-8'
-                           }
+                           },
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
             },
             'addEvaluation_pass': {
                 "method": "post",
@@ -50,13 +56,19 @@ class TestAppraisalDataBase:
                              }
                 },
                 "header": {'Content-Type': 'application/json;charset=UTF-8'
-                           }
+                           },
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
             },
             "listUserEvaluationBill_dpg": {"method": "post",
                                            "url": "/commodity/identification/listUserEvaluationBill",
                                            "data": { "body":{"identification_status": 1, "page_size": 10, "page_index": 1}},
                                            "header": {'Content-Type': 'application/json;charset=UTF-8'
-                                                      }
+                                                      },
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
 
                                            },
             "listUserEvaluationBill_ypg": {"method": "post",
@@ -64,6 +76,9 @@ class TestAppraisalDataBase:
                                            "data":  { "body":{"identification_status": 2, "page_size": 10, "page_index": 1}},
                                            "header": {'Content-Type': 'application/json;charset=UTF-8'
                                                       },
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
                                            },
 
             "listUserEvaluationBill_djb": {"method": "post",
@@ -71,6 +86,9 @@ class TestAppraisalDataBase:
                                            "data":  { "body":{"identification_status": 6, "page_size": 10, "page_index": 1}},
                                            "header": {'Content-Type': 'application/json;charset=UTF-8'
                                            },
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
                                            },
 
             'listUserEvaluationBill_yjj': {"method": "post",
@@ -78,6 +96,9 @@ class TestAppraisalDataBase:
                                            "data":  { "body":{"identification_status": 7, "page_size": 10, "page_index": 1}},
                                            "header": {'Content-Type': 'application/json;charset=UTF-8'
                                                       },
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
                                            },
 
             'listUserEvaluationBill_ygb': {"method": "post",
@@ -85,6 +106,9 @@ class TestAppraisalDataBase:
                                            "data":  { "body":{"identification_status": 10, "page_size": 10, "page_index": 1}},
                                            "header": {'Content-Type': 'application/json;charset=UTF-8'
                                                       },
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
                                            },
 
             'getUserEvaluationBill_pass':{"method": "post",
@@ -92,6 +116,9 @@ class TestAppraisalDataBase:
                                            "data":  { "body":{"bill_number": 'JD2022101600512', }},
                                            "header": {'Content-Type': 'application/json;charset=UTF-8'
                                                       },
+                                  "Assertions":{
+                                      "message": '成功'
+                                  }
                                            },
 
         }

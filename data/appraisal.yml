@@ -1,4 +1,6 @@
 addEvaluation_pass:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       appraisal_item_relation_vos:
@@ -41,6 +43,8 @@ addEvaluation_pass:
   method: post
   url: /commodity/identification/addEvaluation
 appraisaldatabase:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       system_source: '2'
@@ -49,6 +53,8 @@ appraisaldatabase:
   method: post
   url: /commodity/label/listEvaluationLabel
 getUserEvaluationBill_pass:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       bill_number: JD2022101600512
@@ -57,6 +63,8 @@ getUserEvaluationBill_pass:
   method: post
   url: /commodity/identification/getUserEvaluationBill
 listUserEvaluationBill_djb:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       identification_status: 6
@@ -67,6 +75,8 @@ listUserEvaluationBill_djb:
   method: post
   url: /commodity/identification/listUserEvaluationBill
 listUserEvaluationBill_dpg:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       identification_status: 1
@@ -77,6 +87,8 @@ listUserEvaluationBill_dpg:
   method: post
   url: /commodity/identification/listUserEvaluationBill
 listUserEvaluationBill_ygb:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       identification_status: 10
@@ -87,6 +99,8 @@ listUserEvaluationBill_ygb:
   method: post
   url: /commodity/identification/listUserEvaluationBill
 listUserEvaluationBill_yjj:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       identification_status: 7
@@ -97,6 +111,8 @@ listUserEvaluationBill_yjj:
   method: post
   url: /commodity/identification/listUserEvaluationBill
 listUserEvaluationBill_ypg:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       identification_status: 2
@@ -107,6 +123,8 @@ listUserEvaluationBill_ypg:
   method: post
   url: /commodity/identification/listUserEvaluationBill
 listappraisalitem:
+  Assertions:
+    message: "\u6210\u529F"
   data:
     body:
       system_source: 2
